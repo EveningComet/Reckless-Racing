@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c2qxf8pficp3t"]
+
+[ext_resource type="Script" uid="uid://dwlks1c26vyg" path="res://Scripts/UI/Homebase/CharacterList.gd" id="1_4lfsu"]
+[ext_resource type="PackedScene" uid="uid://llr3me7xmpc6" path="res://Scenes/UI/Character Displayer.tscn" id="2_ia1q5"]
+
+[node name="Character List" type="PanelContainer" unique_id=1554384745 node_paths=PackedStringArray("_grid_container")]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_4lfsu")
+_character_ui_prefab = ExtResource("2_ia1q5")
+_grid_container = NodePath("MarginContainer/GridContainer")
+metadata/_custom_type_script = "uid://dwlks1c26vyg"
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1572494648]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer" unique_id=304631081]
+layout_mode = 2
+
+[node name="Character Displayer" parent="MarginContainer/GridContainer" unique_id=381946023 instance=ExtResource("2_ia1q5")]
+layout_mode = 2
+
+[node name="Character Displayer2" parent="MarginContainer/GridContainer" unique_id=756564648 instance=ExtResource("2_ia1q5")]
+layout_mode = 2
+
+[node name="Character Displayer3" parent="MarginContainer/GridContainer" unique_id=786817552 instance=ExtResource("2_ia1q5")]
+layout_mode = 2

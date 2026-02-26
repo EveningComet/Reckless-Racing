@@ -18,6 +18,13 @@ func _ready():
 	button_holder.get_child(0).grab_focus()
 
 func _on_start_game_pressed() -> void:
+	# TODO: Setting up the team here is for testing.
+	# Delete when no longer needed.
+	var team = Team.new()
+	team.name = "Test Team"
+	team.money = 500
+	PlayerController.set_team(team)
+	
 	SceneManager.change_scene(_game_scene)
 
 func _on_quit_button_pressed() -> void:
