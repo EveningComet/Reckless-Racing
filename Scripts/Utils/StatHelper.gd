@@ -6,7 +6,8 @@ enum StatTypes
 {
 	MaxHealth,  # The Max "HP" of a character
 	CurrHealth, # The Curr "HP" of a character
-	RaceSkill,
-	Charisma,
-	Tech
+	RaceSkill,  # The racing skill of a character
+	Charisma,   # The charisma skill of a character
+	Tech,       # The tech skill of a character
+	Management  # The managment skill of a character
 }
