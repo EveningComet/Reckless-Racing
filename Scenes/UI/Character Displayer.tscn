@@ -6,6 +6,7 @@
 [node name="Character Displayer" type="PanelContainer" unique_id=381946023 node_paths=PackedStringArray("portrait", "_name_label", "button")]
 offset_right = 40.0
 offset_bottom = 40.0
+size_flags_horizontal = 3
 mouse_filter = 2
 script = ExtResource("1_rx7c4")
 portrait = NodePath("MarginContainer/HBoxContainer/MarginContainer/Portrait")

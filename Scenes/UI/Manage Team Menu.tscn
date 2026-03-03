@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://dy3wh8lrlkkec"]
+
+[ext_resource type="Script" uid="uid://c73fxl10va764" path="res://Scripts/UI/Homebase/Team Management/ManageTeamMenu.gd" id="1_4186s"]
+[ext_resource type="PackedScene" uid="uid://c2qxf8pficp3t" path="res://Scenes/UI/Character List.tscn" id="2_mvx4n"]
+[ext_resource type="PackedScene" uid="uid://llr3me7xmpc6" path="res://Scenes/UI/Character Displayer.tscn" id="3_mvx4n"]
+
+[node name="Manage Team Menu" type="CanvasLayer" unique_id=743162234 node_paths=PackedStringArray("roster_list", "hire_list", "_grabbed_ui")]
+script = ExtResource("1_4186s")
+roster_list = NodePath("Control/PanelContainer/VBoxContainer/HBoxContainer/Current Roster/VBoxContainer/MarginContainer/ScrollContainer/Player Roster List")
+hire_list = NodePath("Control/PanelContainer/VBoxContainer/HBoxContainer/Available Roster/VBoxContainer/MarginContainer/ScrollContainer/Hire List")
+_grabbed_ui = NodePath("Control/Grabbed UI")
+
+[node name="Control" type="Control" parent="." unique_id=1514998583]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 149.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Control" unique_id=1373053931]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PanelContainer" unique_id=155058685]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/PanelContainer/VBoxContainer" unique_id=285071308]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Current Roster" type="PanelContainer" parent="Control/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1044760547]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/VBoxContainer/HBoxContainer/Current Roster" unique_id=709455197]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/PanelContainer/VBoxContainer/HBoxContainer/Current Roster/VBoxContainer" unique_id=981588310]
+layout_mode = 2
+text = "Current Roster"
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainer/VBoxContainer/HBoxContainer/Current Roster/VBoxContainer" unique_id=1651354271]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/PanelContainer/VBoxContainer/HBoxContainer/Current Roster/VBoxContainer/MarginContainer" unique_id=893158479]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="Player Roster List" parent="Control/PanelContainer/VBoxContainer/HBoxContainer/Current Roster/VBoxContainer/MarginContainer/ScrollContainer" unique_id=1554384745 instance=ExtResource("2_mvx4n")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_displayed_characters_need_interaction = true
+
+[node name="Available Roster" type="PanelContainer" parent="Control/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1089718789]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/VBoxContainer/HBoxContainer/Available Roster" unique_id=454555498]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/PanelContainer/VBoxContainer/HBoxContainer/Available Roster/VBoxContainer" unique_id=1863789504]
+layout_mode = 2
+text = "Available For Hire"
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainer/VBoxContainer/HBoxContainer/Available Roster/VBoxContainer" unique_id=1894303662]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/PanelContainer/VBoxContainer/HBoxContainer/Available Roster/VBoxContainer/MarginContainer" unique_id=77952155]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="Hire List" parent="Control/PanelContainer/VBoxContainer/HBoxContainer/Available Roster/VBoxContainer/MarginContainer/ScrollContainer" unique_id=592339603 instance=ExtResource("2_mvx4n")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_displayed_characters_need_interaction = true
+
+[node name="Grabbed UI" parent="Control" unique_id=381946023 instance=ExtResource("3_mvx4n")]
+visible = false
+layout_mode = 0
+
+[node name="Button" parent="Control/Grabbed UI" index="0" unique_id=411535476]
+mouse_filter = 2
+
+[editable path="Control/Grabbed UI"]

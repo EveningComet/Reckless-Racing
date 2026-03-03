@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://jt74pgqkel2n"]
 
+[ext_resource type="Script" uid="uid://i1c5fc14et0a" path="res://Scripts/UI/Homebase/Team Management/TeamManagementController.gd" id="1_31uvs"]
+[ext_resource type="PackedScene" uid="uid://dy3wh8lrlkkec" path="res://Scenes/UI/Manage Team Menu.tscn" id="2_r3k3x"]
+
 [node name="Team Management Menu" type="CanvasLayer" unique_id=2106196626]
 
 [node name="Control" type="Control" parent="." unique_id=2084375558]
@@ -7,6 +10,34 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 73.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="Buttons Container" type="HBoxContainer" parent="Control" unique_id=823343123]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 40.0
+
+[node name="Manage Button" type="Button" parent="Control/Buttons Container" unique_id=1158624368]
+layout_mode = 2
+text = "Manage"
+
+[node name="Role Placement Button" type="Button" parent="Control/Buttons Container" unique_id=366347589]
+layout_mode = 2
+text = "Role Placement"
+
+[node name="Training Button" type="Button" parent="Control/Buttons Container" unique_id=683448423]
+layout_mode = 2
+text = "Training"
+
+[node name="Manage Team Menu" parent="." unique_id=743162234 instance=ExtResource("2_r3k3x")]
+
+[node name="TeamManagementController" type="Node" parent="." unique_id=2074147277 node_paths=PackedStringArray("_manage_button", "_role_placement_button", "_training_button", "_manage_team_menu")]
+script = ExtResource("1_31uvs")
+_manage_button = NodePath("../Control/Buttons Container/Manage Button")
+_role_placement_button = NodePath("../Control/Buttons Container/Role Placement Button")
+_training_button = NodePath("../Control/Buttons Container/Training Button")
+_manage_team_menu = NodePath("../Manage Team Menu")
+metadata/_custom_type_script = "uid://i1c5fc14et0a"
