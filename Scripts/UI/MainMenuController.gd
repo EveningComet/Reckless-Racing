@@ -13,7 +13,14 @@ class_name MainMenuController extends Node
 func _ready():
 	start_game_button.pressed.connect(_on_start_game_pressed)
 	quit_button.pressed.connect(_on_quit_button_pressed)
-	
+	NormalDist.seed_gen()
+
+# TEST FOR NORMALDIST GENERATION:	
+#	var i = 0
+#	while i < 10:
+#		NormalDist.stat_normal_gen(50)
+#		i += 1
+		
 	# Allow gamepad controls
 	button_holder.get_child(0).grab_focus()
 
