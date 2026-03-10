@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://beeemghbg3tas"
+
+[deps]
+
+files=["res://Imported Assets/Randomized names - Sheet1.FEMALE.translation", "res://Imported Assets/Randomized names - Sheet1.LAST NAME.translation"]
+
+source_file="res://Imported Assets/Randomized names - Sheet1.csv"
+dest_files=["res://Imported Assets/Randomized names - Sheet1.FEMALE.translation", "res://Imported Assets/Randomized names - Sheet1.LAST NAME.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

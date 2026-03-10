@@ -7,7 +7,9 @@ static func generate_character() -> CharacterData:
 	var gender = generate_gender()
 	new_character.gender = gender
 	
-	# TODO: Set name
+	var name = select_name(gender)
+	new_character.name = name
+
 	# TODO: Set portrait
 	
 	var stats = generate_stats()
@@ -34,6 +36,17 @@ static func generate_gender() -> String:
 	
 	return gender
 
+static func select_name(gender: String) -> String:
+	
+	var name: String = ""
+	if gender == "Male":
+		name = NameDb.get_male_name()
+	if gender == "Female":
+		name = NameDb.get_female_name()
+
+	name = "%s %s" % [name, NameDb.get_last_name()]
+		
+	return name
 
 ## Setup the stats for a character.
 static func generate_stats() -> Stats:
