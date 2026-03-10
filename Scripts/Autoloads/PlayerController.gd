@@ -13,4 +13,6 @@ func set_team(new_team: Team) -> void:
 ## Safety check to make sure the player has all the needed team slots filled out.
 ## TODO: Implement properly.
 func is_player_team_valid() -> bool:
+	if team.roster.size() == 0:
+		return false
 	return true

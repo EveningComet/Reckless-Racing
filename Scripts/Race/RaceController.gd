@@ -1,6 +1,9 @@
 ## Handles the race scene.
 class_name RaceController extends Node
 
+## Node that will display the racers of the participating teams.
+@export var _racer_display_list: CharacterList
+
 @export var _end_race_button: Button
 @export_file("*.tscn") var _homebase_scene: String
 

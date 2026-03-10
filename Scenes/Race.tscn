@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c018da34qw4xh"]
 
 [ext_resource type="Script" uid="uid://bbwvx05y1rxjd" path="res://Scripts/Race/RaceController.gd" id="1_an1tg"]
+[ext_resource type="PackedScene" uid="uid://c2qxf8pficp3t" path="res://Scenes/UI/Character List.tscn" id="1_r3dn1"]
 
 [node name="Race" type="Node" unique_id=1800932348]
 
@@ -37,8 +38,28 @@ size_flags_vertical = 8
 text = "End Race
 "
 
-[node name="RaceController" type="Node" parent="." unique_id=961037064 node_paths=PackedStringArray("_end_race_button")]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/Control" unique_id=563373906]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = -108.5
+offset_right = 170.0
+offset_bottom = 108.5
+grow_vertical = 2
+
+[node name="Racers Label" type="Label" parent="CanvasLayer/MarginContainer/Control/VBoxContainer" unique_id=880862037]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Racers"
+
+[node name="Character List" parent="CanvasLayer/MarginContainer/Control/VBoxContainer" unique_id=1554384745 instance=ExtResource("1_r3dn1")]
+layout_mode = 2
+
+[node name="RaceController" type="Node" parent="." unique_id=961037064 node_paths=PackedStringArray("_racer_display_list", "_end_race_button")]
 script = ExtResource("1_an1tg")
+_racer_display_list = NodePath("")
 _end_race_button = NodePath("../CanvasLayer/MarginContainer/Control/End Race Button")
 _homebase_scene = "uid://br8migk3x7hes"
 metadata/_custom_type_script = "uid://bbwvx05y1rxjd"
