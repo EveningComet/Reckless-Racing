@@ -25,7 +25,11 @@ SceneManager="*uid://j20v4cg7v8m1"
 SoundManager="*uid://b1bw7jsy2uyru"
 PlayerController="*uid://cunsdltca3i8b"
 HirePool="*uid://bl0gs85vnudli"
+<<<<<<< HEAD
 Eventbus="*uid://b2xd1tyel68dx"
+=======
+NameDb="*uid://e8ftfgwo7hi3"
+>>>>>>> development
 
 [display]
 
