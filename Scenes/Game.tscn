@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cwcyykv2x8qyd" path="res://Scripts/UI/Homebase/HomebaseCurrentWeekDisplayer.gd" id="1_kldst"]
 [ext_resource type="PackedScene" uid="uid://boypauosjpty7" path="res://Scenes/UI/Money Displayer.tscn" id="2_b2bpf"]
 [ext_resource type="Script" uid="uid://ub8vw6fv1jdy" path="res://Scripts/UI/Homebase/HomebaseController.gd" id="2_gl6un"]
-[ext_resource type="PackedScene" uid="uid://cv12xuw64h2e7" path="res://Scenes/UI/Season Management Menu.tscn" id="3_j5yw3"]
+[ext_resource type="PackedScene" uid="uid://cv12xuw64h2e7" path="res://Scenes/UI/Season Management/Season Management Menu.tscn" id="3_j5yw3"]
 [ext_resource type="Script" uid="uid://dl71f7x30pm55" path="res://Scripts/UI/Homebase/EndWeekHandler.gd" id="6_7lihs"]
 
 [node name="Game" type="Node" unique_id=1428147177]

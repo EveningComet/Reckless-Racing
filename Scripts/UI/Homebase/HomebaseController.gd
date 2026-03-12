@@ -23,12 +23,12 @@ func _ready() -> void:
 	PlayerController.team.money_changed.connect(_on_money_changed)
 
 func _on_manage_team_button_pressed() -> void:
-	_team_management_menu.show()
 	_season_management_menu.hide()
+	_team_management_menu.show()
 
 func _on_season_management_button_pressed() -> void:
-	_season_management_menu.show()
 	_team_management_menu.hide()
+	_season_management_menu.show()
 
 ## Used to automatically display .
 func _on_money_changed(new_amount: int) -> void:

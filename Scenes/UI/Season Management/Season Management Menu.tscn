@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cv12xuw64h2e7"]
+
+[ext_resource type="Script" uid="uid://dysfopo6vi7dx" path="res://Scripts/UI/Homebase/Season Management/SeasonManagementController.gd" id="1_svy71"]
+[ext_resource type="PackedScene" uid="uid://b268lfi4bpi4m" path="res://Scenes/UI/Season Management/Schedule Event Menu.tscn" id="2_7rqaj"]
+
+[node name="Season Management Menu" type="CanvasLayer" unique_id=1967363082]
+
+[node name="Control" type="Control" parent="." unique_id=581405936]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 73.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Buttons Container" type="HBoxContainer" parent="Control" unique_id=702225056]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 40.0
+
+[node name="Schedule Button" type="Button" parent="Control/Buttons Container" unique_id=647994323]
+layout_mode = 2
+text = "Schedule"
+
+[node name="Schedule Event Menu" parent="." unique_id=1306038699 instance=ExtResource("2_7rqaj")]
+visible = false
+
+[node name="SeasonManagementController" type="Node" parent="." unique_id=2040392763 node_paths=PackedStringArray("_schedule_button", "_schedule_event_menu")]
+script = ExtResource("1_svy71")
+_schedule_button = NodePath("../Control/Buttons Container/Schedule Button")
+_schedule_event_menu = NodePath("../Schedule Event Menu")
+metadata/_custom_type_script = "uid://dysfopo6vi7dx"

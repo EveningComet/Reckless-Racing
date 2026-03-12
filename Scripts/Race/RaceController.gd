@@ -15,4 +15,8 @@ func _ready() -> void:
 
 func _on_end_race_button_pressed() -> void:
 	_end_race_button.disabled = true
+	
+	# TODO: Scale the money, somehow, someway.
+	var prize_money: int = 100
+	PlayerController.team.add_or_sub_money(prize_money)
 	SceneManager.change_scene(_homebase_scene)
