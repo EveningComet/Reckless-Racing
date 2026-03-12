@@ -45,16 +45,18 @@ func _on_list_content_interacted(
 		
 			# The player is selecting a character
 			[null, interacted_displayer]:
-				# TODO: This method is where we need to check if the player is trying to
-				# buy a character they don't have enough money for.
-				# Remember to make sure the player doesn't have to pay for selecting their
-				# own characters!
+				
 				var player_money: int   = PlayerController.team.money
 				var selected_char: CharacterData = interacted_displayer.character
 				var character_cost: int = CharacterGenerator.get_cost_for_char(selected_char)
+				if player_money >= character_cost and _get_object_containing_character(selected_char) is HirePool:
+					PlayerController.team.add_or_sub_money(-character_cost)
+				elif _get_object_containing_character(selected_char) is PlayerController:
+					pass
+				else:
+					return
+				_grabbed_character_data = selected_char
 				
-				_grabbed_character_data = interacted_displayer.character
-			
 			# Something not accounted for happened
 			[_, _]:
 				pass

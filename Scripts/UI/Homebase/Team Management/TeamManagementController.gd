@@ -12,6 +12,7 @@ class_name TeamManagementController extends Node
 func _ready() -> void:
 	_manage_team_menu.hide()
 	_manage_button.pressed.connect( _on_manage_button_pressed )
+	_role_placement_button.pressed.connect( _on_role_placement_pressed )
 	_training_button.pressed.connect( _on_training_button_pressed )
 	
 	get_parent().visibility_changed.connect( _on_visibility_changed )
@@ -22,10 +23,10 @@ func _on_manage_button_pressed() -> void:
 	_manage_team_menu.show()
 
 func _on_role_placement_pressed() -> void:
-	pass
+	_manage_team_menu.hide()
 
 func _on_training_button_pressed() -> void:
-	pass
+	_manage_team_menu.hide()
 
 func _on_visibility_changed() -> void:
 	_manage_team_menu.hide()
