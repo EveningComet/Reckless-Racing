@@ -26,6 +26,7 @@ SoundManager="*uid://b1bw7jsy2uyru"
 PlayerController="*uid://cunsdltca3i8b"
 HirePool="*uid://bl0gs85vnudli"
 Eventbus="*uid://b2xd1tyel68dx"
+NameDb="*uid://e8ftfgwo7hi3"
 
 [display]
 

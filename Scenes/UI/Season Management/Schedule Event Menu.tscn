@@ -58,22 +58,21 @@ custom_minimum_size = Vector2(125, 25)
 layout_mode = 2
 text = "Make Money"
 
-[node name="Menu Contents Displayer" type="PanelContainer" parent="Control/PanelContainer/MarginContainer/HBoxContainer" unique_id=1085988909]
+[node name="Make Money Menu" type="Control" parent="Control/PanelContainer/MarginContainer/HBoxContainer" unique_id=253382642 node_paths=PackedStringArray("_menu_button", "_character_select_drop_down_button")]
 layout_mode = 2
 size_flags_horizontal = 3
+script = ExtResource("2_c3e0o")
+_menu_button = NodePath("../ScrollContainer/MarginContainer/Selectables Menu/Make Money")
+_character_select_drop_down_button = NodePath("Character Select Dropdown")
 
-[node name="Character Select Dropdown" type="OptionButton" parent="Control" unique_id=511907]
+[node name="Character Select Dropdown" type="OptionButton" parent="Control/PanelContainer/MarginContainer/HBoxContainer/Make Money Menu" unique_id=511907]
 custom_minimum_size = Vector2(200, 25)
-layout_mode = 0
-offset_right = 32.0
-offset_bottom = 20.0
+layout_mode = 1
+offset_left = 847.0
+offset_top = 213.0
+offset_right = 1047.0
+offset_bottom = 238.0
 
 [node name="ScheduleEventMenuController" type="Node" parent="." unique_id=800716451]
 script = ExtResource("1_xaypn")
 metadata/_custom_type_script = "uid://blhd3hy8cbw6x"
-
-[node name="Make Money" type="Node" parent="ScheduleEventMenuController" unique_id=21609536 node_paths=PackedStringArray("_button", "_associated_menu")]
-script = ExtResource("2_c3e0o")
-_button = NodePath("../../Control/PanelContainer/MarginContainer/HBoxContainer/ScrollContainer/MarginContainer/Selectables Menu/Make Money")
-_associated_menu = NodePath("")
-metadata/_custom_type_script = "uid://hr27v8fapwi6"
