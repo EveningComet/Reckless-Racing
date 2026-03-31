@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://b268lfi4bpi4m"]
 
+[ext_resource type="Script" uid="uid://blhd3hy8cbw6x" path="res://Scripts/UI/Homebase/Season Management/ScheduleEventMenuController.gd" id="1_xaypn"]
+[ext_resource type="Script" uid="uid://hr27v8fapwi6" path="res://Scripts/Scheduable Event/ScheduableEventUI.gd" id="2_c3e0o"]
+
 [node name="Schedule Event Menu" type="CanvasLayer" unique_id=1306038699]
 
 [node name="Control" type="Control" parent="." unique_id=55160461]
@@ -45,11 +48,32 @@ theme_override_constants/margin_bottom = 10
 [node name="Selectables Menu" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/HBoxContainer/ScrollContainer/MarginContainer" unique_id=459586986]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="Control/PanelContainer/MarginContainer/HBoxContainer/ScrollContainer/MarginContainer/Selectables Menu" unique_id=586631923]
+[node name="Sabotage Button" type="Button" parent="Control/PanelContainer/MarginContainer/HBoxContainer/ScrollContainer/MarginContainer/Selectables Menu" unique_id=586631923]
 custom_minimum_size = Vector2(125, 25)
 layout_mode = 2
 text = "Sabotage"
 
+[node name="Make Money" type="Button" parent="Control/PanelContainer/MarginContainer/HBoxContainer/ScrollContainer/MarginContainer/Selectables Menu" unique_id=581559137]
+custom_minimum_size = Vector2(125, 25)
+layout_mode = 2
+text = "Make Money"
+
 [node name="Menu Contents Displayer" type="PanelContainer" parent="Control/PanelContainer/MarginContainer/HBoxContainer" unique_id=1085988909]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="Character Select Dropdown" type="OptionButton" parent="Control" unique_id=511907]
+custom_minimum_size = Vector2(200, 25)
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 20.0
+
+[node name="ScheduleEventMenuController" type="Node" parent="." unique_id=800716451]
+script = ExtResource("1_xaypn")
+metadata/_custom_type_script = "uid://blhd3hy8cbw6x"
+
+[node name="Make Money" type="Node" parent="ScheduleEventMenuController" unique_id=21609536 node_paths=PackedStringArray("_button", "_associated_menu")]
+script = ExtResource("2_c3e0o")
+_button = NodePath("../../Control/PanelContainer/MarginContainer/HBoxContainer/ScrollContainer/MarginContainer/Selectables Menu/Make Money")
+_associated_menu = NodePath("")
+metadata/_custom_type_script = "uid://hr27v8fapwi6"

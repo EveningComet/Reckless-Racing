@@ -7,6 +7,9 @@ extends Node
 var team: Team = null
 var current_week: int = 1
 
+## The list of things that will be processed at the start of the week.
+var player_scheduled_events: Array[ScheduableEventData]
+
 func set_team(new_team: Team) -> void:
 	team = new_team
 

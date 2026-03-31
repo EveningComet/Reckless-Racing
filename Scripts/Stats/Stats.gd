@@ -17,3 +17,11 @@ var curr_hp: int:
 
 var max_hp: int:
 	get: return floor(int(stats[StatHelper.StatTypes.MaxHealth].get_calculated_value()))
+
+func add_modifier(stat_type: StatHelper.StatTypes, mod: StatModifier) -> void:
+	stats[stat_type].add_modifier(mod)
+	stat_changed.emit(self)
+
+func remove_modifier(stat_type: StatHelper.StatTypes, mod: StatModifier) -> void:
+	stats[stat_type].remove_modifier(mod)
+	stat_changed.emit(self)
